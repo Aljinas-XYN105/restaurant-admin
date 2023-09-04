@@ -1,0 +1,13 @@
+<div class="modal-wrapper">
+  <h2 mat-dialog-title>Add Advanced Description</h2>
+  <div mat-dialog-content>
+    <div class="row">
+      <angular-editor [placeholder]="'Enter text here...'" [(ngModel)]="htmlContent" [config]="config"></angular-editor>
+    </div>
+  <div class="d-flex modal-btn-footer" mat-dialog-action>
+    <button mat-stroked-button color="warn" style="border:1px solid grey" (click)="close()"
+      class="commonBtnStyle  mr-2">Close</button>
+    <button  mat-stroked-button color="primary" style="border:1px solid grey"
+      (click)="submit()" class="commonBtnStyle  mr-4">Submit</button>
+  </div>
+</div>

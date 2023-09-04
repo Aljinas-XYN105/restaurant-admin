@@ -1,0 +1,37 @@
+<div class="card">
+  <div class="card-head"><i class="fal fa-circle mr-3" aria-hidden="true"></i>Module Management
+    <strong>{{branchName}}</strong>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-12">
+        <div style="float: right;">
+          <button style="width:150px;" class="mr-2" mat-stroked-button color="primary"
+            (click)="refresh()">Refresh</button>
+          <button style="width:150px;" mat-stroked-button color="primary" (click)="save()">Save</button>
+        </div>
+      </div>
+    </div>
+    <div cdkDropListGroup>
+      <div class="example-container">
+        <h2>All Modules</h2>
+        <div cdkDropList [cdkDropListData]="allModules" class="example-list" cdkDropListSortingDisabled
+          (cdkDropListDropped)="drop($event)">
+          <div class="example-box" *ngFor="let item of allModules" cdkDrag>{{item.name}}</div>
+        </div>
+      </div>
+
+      <div class="example-container">
+        <h2>Currently Active Modules</h2>
+        <div cdkDropList [cdkDropListData]="activeModules" class="example-list" (cdkDropListDropped)="drop($event)">
+          <div class="example-box" *ngFor="let item of activeModules" cdkDrag>{{item.name}} </div>
+          <span style="padding:35px;" *ngIf="activeModules.length <= 0">Drag and Drop here to add. </span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="card-footer">
+
+  </div>
+</div>

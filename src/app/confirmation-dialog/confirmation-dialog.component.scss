@@ -1,0 +1,76 @@
+.b-right {
+  float: right;
+}
+
+.dialog-container {
+  width: 350px;
+}
+
+.commonModalMakinDiv {
+  padding:20px 25px 40px 25px;
+  margin-bottom: 20px;
+  .mat-icon.mat-warn {
+    color: #000;
+    background: none !important;
+  }
+
+  h1 {
+    color: #263238;
+    font-size: 25px;
+    border-bottom: 1px #ddd solid;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+
+
+    font-weight: bold;
+  }
+
+  p {
+    color: #000;
+    font-size: 16px;
+
+
+    font-weight: normal;
+  }
+
+}
+
+.commonBtnStyle {
+  width: 80px;
+  padding: 9px;
+}
+
+.mat-dialog-actions {
+
+  min-height: 52px;
+
+  width: 100%;
+  background: #f2f2f2;
+  padding: 10px 0px;
+  margin: 0 auto;
+  text-align: right;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.mat-dialog-content {
+  padding: 0 24px 55px;
+}
+.modal-wrapper {
+  h2 {
+    border-bottom: 1px solid #d7d7d7;
+    color: #4a4a4a;
+  }
+  .modal-btn-footer {
+    justify-content: right;
+    border-top: 1px solid #d7d7d7;
+    margin: 10px 0;
+    padding: 10px 0;
+  }
+  .form-check-label {
+    margin-bottom: 10px;
+  }
+}

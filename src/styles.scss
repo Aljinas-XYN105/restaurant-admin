@@ -1,0 +1,184 @@
+/* You can add global styles to this file, and also import other style files */
+// @import "@angular/material/prebuilt-themes/indigo-pink.css";
+
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import '../node_modules/font-awesome/css/font-awesome.css';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  margin: 1.25rem 0 1.25rem 0;
+  box-shadow: 0 0.25rem 0.5rem #e6edef;
+
+  .right {
+    float: right !important;
+  }
+
+  .card-head {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #edf1f7;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #263238;
+  }
+  .card-footer {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid #edf1f7;
+    button {
+      width: 105px;
+      border-color: #263238;
+    }
+    mat-icon {
+      font-size: 18px;
+      margin-top: 2px;
+    }
+  }
+  .card-body {
+    padding: 1rem 1.5rem;
+  }
+
+  .card-actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .btn-setting {
+    display: block;
+    float: left;
+    width: 50px;
+    padding: 0.75rem 0;
+    margin: 0 !important;
+    color: #151b1e;
+    text-align: center;
+    background: 0 0;
+    border: 0;
+    border-left-color: currentcolor;
+    border-left-style: none;
+    border-left-width: 0px;
+    border-left: 1px solid #c2cfd6;
+    cursor: pointer;
+  }
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+// new table css ----------------------------------------------------------------------------------------
+
+.bordered {
+  width: 100%;
+  border: solid #ccc 1px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 1px 1px #ccc;
+  -moz-box-shadow: 0 1px 1px #ccc;
+  box-shadow: 0 1px 1px #ccc;
+  margin-bottom: 5px;
+  text-align: center !important;
+}
+.bordered tr:hover {
+  background: #ececec !important;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+.bordered td,
+.bordered th {
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  text-align: left !important;
+  vertical-align: middle;
+  text-align: center !important;
+}
+.bordered th {
+  background-color: #ececec;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#f8f8f8),
+    to(#ececec)
+  );
+  background-image: -webkit-linear-gradient(top, #f8f8f8, #ececec);
+  background-image: -moz-linear-gradient(top, #f8f8f8, #ececec);
+  background-image: linear-gradient(top, #f8f8f8, #ececec);
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset;
+  border-top: none;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  text-align: center !important;
+}
+.bordered td:first-child,
+.bordered th:first-child {
+  border-left: none;
+}
+.bordered th:first-child {
+  -moz-border-radius: 15px 0 0 0;
+  -webkit-border-radius: 15px 0 0 0;
+  border-radius: 15px 0 0 0;
+}
+.bordered th:last-child {
+  -moz-border-radius: 0 15px 0 0;
+  -webkit-border-radius: 0 15px 0 0;
+  border-radius: 0 15px 0 0;
+}
+.bordered th:only-child {
+  -moz-border-radius: 15px 15px 0 0;
+  -webkit-border-radius: 15px 15px 0 0;
+  border-radius: 15px 15px 0 0;
+}
+.bordered tr:last-child td:first-child {
+  -moz-border-radius: 0 0 0 15px;
+  -webkit-border-radius: 0 0 0 15px;
+  border-radius: 0 0 0 15px;
+}
+.bordered tr:last-child td:last-child {
+  -moz-border-radius: 0 0 15px 0;
+  -webkit-border-radius: 0 0 15px 0;
+  border-radius: 0 0 15px 0;
+}
+
+// ========================================================================================
+
+.not-found {
+  // background: #fff;
+  // padding: 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+  text-align: center !important;
+  h3 {
+    font-size: 30px !important;
+    color: #263238 !important;
+    font-weight: bold !important;
+  }
+
+  p {
+    font-weight: normal !important;
+    color: #000 !important;
+    font-size: 14px !important;
+  }
+}
+.mat-sort-header-container {
+  justify-content: center;
+}

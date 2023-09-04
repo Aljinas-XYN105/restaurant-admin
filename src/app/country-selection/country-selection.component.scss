@@ -1,0 +1,19 @@
+.modal-wrapper {
+  background: url(../../assets/images/map.jpg);
+  padding: 25px;
+  color: #1d3a46 !important;
+  height: 380px;
+  overflow-y: scroll;
+  h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .list {
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+}

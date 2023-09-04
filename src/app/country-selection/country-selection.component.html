@@ -1,0 +1,17 @@
+<div class="modal-wrapper">
+
+  <h2 mat-dialog-title>Please Choose Your Country</h2>
+  <div class="row col-12">
+    <div class="col-4 list" (click)="countrySeleceted(country)" *ngFor="let country of countriesArray">
+      <label>{{country.name}}</label><br>
+      <img src="{{imagePath}}/{{country.flag}}" style="width:78px;height:45px;">
+    </div>
+  </div>
+  <!-- <div mat-dialog-actions>
+    <div class="footer">
+      <span>
+        Country not listed? Click here</span>
+    </div>
+  </div> -->
+
+</div>

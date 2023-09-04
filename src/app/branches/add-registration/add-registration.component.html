@@ -1,0 +1,80 @@
+<div class="modal-wrapper">
+    <!-- <h2 mat-dialog-title *ngIf="data?.operation != 'edit'">Add Registration</h2>
+    <h2 mat-dialog-title *ngIf="data?.operation == 'edit'">Update Branch</h2> -->
+    <h2 mat-dialog-title >Add Registration</h2>
+    <div mat-dialog-content>
+        <form [formGroup]="branchForm" class="mt-3">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Registration Date *</mat-label>
+                        <input type="date" matInput formControlName="registered_date">
+                        <mat-error
+                            *ngIf="branchForm.controls['registered_date'].hasError('required' ) && branchForm.controls['registered_date'].touched">
+                            Required
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Expiry date*</mat-label>
+                        <input type="date" matInput formControlName="expiry_date">
+                        <mat-error
+                            *ngIf="branchForm.controls['expiry_date'].hasError('required' ) && branchForm.controls['expiry_date'].touched">
+                            Required
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Notify Period *</mat-label>
+                        <input type="number" matInput formControlName="notify_period">
+                        <mat-error
+                            *ngIf="branchForm.controls['notify_period'].hasError('required' ) && branchForm.controls['notify_period'].touched">
+                            Required
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Grace Period*</mat-label>
+                        <input type="number" matInput formControlName="grace_period">
+                        <mat-error
+                            *ngIf="branchForm.controls['grace_period'].hasError('required' ) && branchForm.controls['grace_period'].touched">
+                            Required
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+
+            </div>
+            <div class="row">
+
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Amount *</mat-label>
+                        <input type="text" matInput formControlName="amount">
+                        <mat-error
+                            *ngIf="branchForm.controls['amount'].hasError('required' ) && branchForm.controls['amount'].touched">
+                            Required
+                        </mat-error>
+                    </mat-form-field>
+
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+    <div class="d-flex modal-btn-footer" mat-dialog-action>
+        <button mat-stroked-button color="warn" style="border:1px solid grey" (click)="close()"
+            class="commonBtnStyle  mr-2">Close</button>
+        <!-- <button *ngIf="data?.operation != 'edit'" mat-stroked-button color="primary" style="border:1px solid grey"
+            (click)="submit()" class="commonBtnStyle  mr-4">Submit</button>
+        <button *ngIf="data?.operation == 'edit'" mat-stroked-button color="primary" style="border:1px solid grey"
+            (click)="update()" class="commonBtnStyle  mr-4">Update</button> -->
+            <button mat-stroked-button color="primary" style="border:1px solid grey"
+            (click)="submit()" class="commonBtnStyle  mr-4">Submit</button>
+    </div>
+</div>
