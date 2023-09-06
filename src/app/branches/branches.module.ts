@@ -27,6 +27,7 @@ import { ModuleManagementComponent } from './module-management/module-management
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { AddRegistrationComponent } from './add-registration/add-registration.component';
 import { RegistrationsComponent } from './registrations/registrations.component';
+import { AssignStaffComponent } from './assign-staff/assign-staff.component';
 @NgModule({
   declarations: [
     BranchesComponent,
@@ -34,7 +35,8 @@ import { RegistrationsComponent } from './registrations/registrations.component'
     OperationsComponent,
     ModuleManagementComponent,
     AddRegistrationComponent,
-    RegistrationsComponent
+    RegistrationsComponent,
+    AssignStaffComponent
   ],
   imports: [
     CommonModule,

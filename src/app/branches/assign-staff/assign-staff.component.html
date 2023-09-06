@@ -1,0 +1,59 @@
+<div class="card">
+  <div class="card-head"><i class="fal fa-user mr-3" aria-hidden="true"></i>Assign Staff</div>
+  <div class="card-body">
+    <form [formGroup]="staffForm">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Name </mat-label>
+            <input type="text" matInput formControlName="name">
+            <mat-error *ngIf="staffForm.controls['name'].hasError('required' ) && staffForm.controls['name'].touched">
+              Required
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Phone Number</mat-label>
+            <input type="text" matInput formControlName="phone_number">
+            <mat-error
+              *ngIf="staffForm.controls['phone_number'].hasError('required' ) && staffForm.controls['phone_number'].touched">
+              Required
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input type="text" matInput formControlName="email">
+            <mat-error *ngIf="staffForm.controls['email'].hasError('required' ) && staffForm.controls['email'].touched">
+              Required
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Address</mat-label>
+            <textarea matInput formControlName="address"></textarea>
+            <mat-error
+              *ngIf="staffForm.controls['address'].hasError('required' ) && staffForm.controls['address'].touched">
+              Required
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="card-footer">
+    <div class="right">
+      <button mat-stroked-button class="mr-2" color="warn" (click)="reset()">
+        <mat-icon matSuffix>restart_alt</mat-icon>Reset
+      </button>
+      <button mat-stroked-button color="primary" (click)="save()">
+        <mat-icon matSuffix>app_registration</mat-icon>Save
+      </button>
+    </div>
+  </div>
+</div>
