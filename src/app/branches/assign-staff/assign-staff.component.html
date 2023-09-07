@@ -1,9 +1,9 @@
 <div class="card">
-  <div class="card-head"><i class="fal fa-user mr-3" aria-hidden="true"></i>Assign Staff</div>
+  <div class="card-head"><i class="fal fa-user mr-3" aria-hidden="true"></i>Customer Support</div>
   <div class="card-body">
     <form [formGroup]="staffForm">
       <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-6">
+        <div class="col-sm-12 col-md-4 col-lg-4">
           <mat-form-field class="example-full-width" appearance="outline">
             <mat-label>Name </mat-label>
             <input type="text" matInput formControlName="name">
@@ -12,14 +12,28 @@
             </mat-error>
           </mat-form-field>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-6">
+        <div class="col-sm-12 col-md-4 col-lg-4">
           <mat-form-field class="example-full-width" appearance="outline">
             <mat-label>Phone Number</mat-label>
-            <input type="text" matInput formControlName="phone_number">
+            <input type="text" matInput formControlName="contact_no">
             <mat-error
-              *ngIf="staffForm.controls['phone_number'].hasError('required' ) && staffForm.controls['phone_number'].touched">
+              *ngIf="staffForm.controls['contact_no'].hasError('required' ) && staffForm.controls['contact_no'].touched">
               Required
             </mat-error>
+            <mat-error
+            *ngIf="staffForm.controls['contact_no'].hasError('pattern' ) && staffForm.controls['contact_no'].touched">
+            Invalid Input
+          </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Whatsapp Number</mat-label>
+            <input type="text" matInput formControlName="whatsapp_no">
+            <mat-error
+            *ngIf="staffForm.controls['whatsapp_no'].hasError('pattern' ) && staffForm.controls['whatsapp_no'].touched">
+            Invalid Input
+          </mat-error>
           </mat-form-field>
         </div>
       </div>
@@ -31,6 +45,10 @@
             <mat-error *ngIf="staffForm.controls['email'].hasError('required' ) && staffForm.controls['email'].touched">
               Required
             </mat-error>
+            <mat-error
+            *ngIf="staffForm.controls['email'].hasError('pattern' ) && staffForm.controls['email'].touched">
+            Invalid Input
+          </mat-error>
           </mat-form-field>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-6">

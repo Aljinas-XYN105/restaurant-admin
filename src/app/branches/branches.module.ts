@@ -28,6 +28,9 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { AddRegistrationComponent } from './add-registration/add-registration.component';
 import { RegistrationsComponent } from './registrations/registrations.component';
 import { AssignStaffComponent } from './assign-staff/assign-staff.component';
+import { CopyMenuModifiersComponent } from './copy-menu-modifiers/copy-menu-modifiers.component';
+import { MenuCopyComponent } from './menu-copy/menu-copy.component';
+import { SubscriptionHistoryComponent } from './subscription-history/subscription-history.component';
 @NgModule({
   declarations: [
     BranchesComponent,
@@ -36,7 +39,10 @@ import { AssignStaffComponent } from './assign-staff/assign-staff.component';
     ModuleManagementComponent,
     AddRegistrationComponent,
     RegistrationsComponent,
-    AssignStaffComponent
+    AssignStaffComponent,
+    MenuCopyComponent,
+    CopyMenuModifiersComponent,
+    SubscriptionHistoryComponent,
   ],
   imports: [
     CommonModule,

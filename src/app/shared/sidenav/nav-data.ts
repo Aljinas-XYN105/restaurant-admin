@@ -10,30 +10,5 @@ export const navbarData: INavbarData[] = [
     routeLink: 'tenant',
     icon: 'fal fa-home',
     label: 'Manage Tenant'
-  },
-  // {
-  //   routeLink: 'branches',
-  //   icon: 'fal fa-home',
-  //   label: 'Manage Branches'
-  // },
-  {
-    routeLink: 'settings',
-    icon: 'fal fa-cog',
-    label: 'Settings',
-    expanded: true,
-    items: [
-      {
-        routeLink: 'settings/working-hours',
-        label: 'Working hours'
-      },
-      {
-        routeLink: 'settings/profile',
-        label: 'Profile'
-      },
-      {
-        routeLink: 'login',
-        label: 'logout'
-      }
-    ]
-  },
+  }
 ];

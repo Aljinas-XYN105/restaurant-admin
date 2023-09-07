@@ -43,4 +43,13 @@ export class OperationsComponent {
     this.dataService.setData('branch_name', this.branchName);
     this.router.navigate(['branches/' + this.branchId + '/' + this.tenantId + '/operations/assign-staff'])
   }
+  menuCopy() {
+    this.dataService.setData('branch_name', this.branchName);
+    this.router.navigate(['branches/' + this.branchId + '/' + this.tenantId + '/operations/menu-copy'])
+  }
+
+  copyModifiers() {
+    this.dataService.setData('branch_name', this.branchName);
+    this.router.navigate(['branches/' + this.branchId + '/' + this.tenantId + '/operations/copy-menu-modifiers'])
+  }
 }

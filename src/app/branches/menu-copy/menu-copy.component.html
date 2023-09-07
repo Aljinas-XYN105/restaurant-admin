@@ -1,0 +1,60 @@
+<div class="card">
+  <div class="card-head"><i class="fal fa-calendar mr-3" aria-hidden="true"></i>Copy Menu</div>
+  <div class="card-body">
+    <form [formGroup]="Form">
+      <div class="row">
+        <div class="col-4">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Tenant</mat-label>
+            <mat-select formControlName="tenant_id" (selectionChange)="tenantChange()">
+              <mat-option [value]="i.id" *ngFor="let i of tenantArray">
+                {{i.name}}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="Form.controls['tenant_id'].hasError('required' ) && Form.controls['tenant_id'].touched">
+              Required
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-4">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>From Branch</mat-label>
+            <mat-select formControlName="from_branch_id">
+              <mat-option [value]="i.id" *ngFor="let i of branchArray">
+                {{i.name}}
+              </mat-option>
+            </mat-select>
+            <mat-error
+              *ngIf="Form.controls['from_branch_id'].hasError('required' ) && Form.controls['from_branch_id'].touched">
+              Required
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col-4">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>To Branch</mat-label>
+            <mat-select formControlName="to_branch_id">
+              <mat-option [value]="branchId">
+                {{selectedBranchName}}
+              </mat-option>
+            </mat-select>
+            <mat-error
+              *ngIf="Form.controls['to_branch_id'].hasError('required' ) && Form.controls['to_branch_id'].touched">
+              Required
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="card-footer">
+    <div class="right">
+      <!-- <button mat-stroked-button class="mr-2" color="warn" (click)="reset()">
+        <mat-icon matSuffix>restart_alt</mat-icon>Reset
+      </button> -->
+      <button mat-stroked-button color="primary" (click)="submit()">
+        <mat-icon matSuffix>app_registration</mat-icon>Submit
+      </button>
+    </div>
+  </div>
+</div>
