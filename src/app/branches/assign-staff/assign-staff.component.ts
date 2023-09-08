@@ -21,12 +21,18 @@ export class AssignStaffComponent {
   public emailPattern = "[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$";
   branchId: any = this.route.snapshot.params['branch_id'];
   tenantId: any = this.route.snapshot.params['tenant_id'];
+  branchName: any = this.dataService.getData('branch_name')
   constructor(private route: ActivatedRoute, public dialog: MatDialog, private router: Router, private constants: Constants, private dataService: DataService, private fb: UntypedFormBuilder, private httpService: HttpServiceService, private snackbService: SnackBarService) {
   }
 
   ngOnInit(): void {
+    if (!this.dataService.getData('branch_name')) {
+      this.router.navigate(['tenant'])
+    }
+    else {
     this.getCustomerSupportData();
     this.onBuildForm();
+    }
   }
 
   ngOnDestroy() {

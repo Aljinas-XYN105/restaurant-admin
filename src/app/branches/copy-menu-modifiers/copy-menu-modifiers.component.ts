@@ -18,6 +18,7 @@ export class CopyMenuModifiersComponent {
   branchId: any = this.route.snapshot.params['branch_id']
   tenantId: any = this.route.snapshot.params['tenant_id'];
   selectedBranchName: any = this.dataService.getData('branch_name')
+  branchName: any = this.dataService.getData('branch_name')
   constructor(private dataService: DataService, private dialogService: ConfirmationDialogService, private snackBService: SnackBarService, private router: Router, private constants: Constants, private fb: UntypedFormBuilder, private httpService: HttpServiceService, private snackbService: SnackBarService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {

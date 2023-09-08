@@ -20,6 +20,7 @@ export class AddBranchComponent {
   tenantArray: any = [];
   currencyArray: any = []
   public emailPattern = "[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$";
+  tenant_id: any = this.dataService.getData('tenant_id')
   constructor(private dataService: DataService, private fb: FormBuilder, @Inject(MAT_DIALOG_DATA) public data: { editData: any, operation: any }, private httpService: HttpServiceService, private snackbService: SnackBarService, private localService: LocalStorage, public dialogRef: MatDialogRef<AddBranchComponent>) {
   }
 
@@ -37,8 +38,8 @@ export class AddBranchComponent {
   onBuildForm() {
     this.branchForm = this.fb.group({
       name: ['', Validators.compose([Validators.required])],
-      tenant_id: ['', Validators.compose([Validators.required])],
       country_id: ['', Validators.compose([Validators.required])],
+      tenant_id: [this.tenant_id, Validators.compose([Validators.required])],
       contact_number: ['', Validators.compose([Validators.required, Validators.pattern('^([0-9]{6,13})$')])],
       currency_id: ['', Validators.compose([Validators.required])],
       user_name: ['', Validators.compose([Validators.required])],

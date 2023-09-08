@@ -12,6 +12,7 @@ import { AddRegistrationComponent } from '../add-registration/add-registration.c
 import { FormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { SubscriptionHistoryComponent } from '../subscription-history/subscription-history.component';
 
+
 export interface Data {
   id: string;
   Registered_date: any;

@@ -20,12 +20,18 @@ export class PrinterLogoUploadComponent {
   tenantId: any = this.route.snapshot.params['tenant_id'];
   ImageBaseData: any | ArrayBuffer = null;
   imagePath:any=this.constants.imageBasePath+'/'
+  branchName: any = this.dataService.getData('branch_name')
   constructor(private route: ActivatedRoute, public dialog: MatDialog, private router: Router, private constants: Constants, private dataService: DataService, private fb: UntypedFormBuilder, private httpService: HttpServiceService, private snackbService: SnackBarService) {
   }
 
   ngOnInit(): void {
+    if (!this.dataService.getData('branch_name')) {
+      this.router.navigate(['tenant'])
+    }
+    else {
     this.getprinterLogo();
     this.onBuildForm();
+    }
   }
 
   ngOnDestroy() {

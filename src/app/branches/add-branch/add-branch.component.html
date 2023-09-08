@@ -5,33 +5,16 @@
   <div mat-dialog-content>
     <form [formGroup]="branchForm" class="mt-3">
       <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-6">
+        <div class="col-sm-12 col-md-4 col-lg-4">
           <mat-form-field class="example-full-width" appearance="outline">
-            <mat-label>Tenant*</mat-label>
-            <mat-select formControlName="tenant_id">
-              <mat-option [value]="i.id" *ngFor="let i of tenantArray">
-                {{i.name}}
-              </mat-option>
-            </mat-select>
-            <mat-error
-              *ngIf="branchForm.controls['tenant_id'].hasError('required' ) && branchForm.controls['tenant_id'].touched">
-              Required
-            </mat-error>
-          </mat-form-field>
-        </div>
-        <div class="col-sm-12 col-md-6 col-lg-6">
-          <mat-form-field class="example-full-width" appearance="outline">
-            <mat-label>Name</mat-label>
+            <mat-label>Name*</mat-label>
             <input type="text" matInput formControlName="name">
             <mat-error *ngIf="branchForm.controls['name'].hasError('required' ) && branchForm.controls['name'].touched">
               Required
             </mat-error>
           </mat-form-field>
         </div>
-
-      </div>
-      <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-6">
+         <div class="col-sm-12 col-md-4 col-lg-4">
           <mat-form-field class="example-full-width" appearance="outline">
             <mat-label>Country*</mat-label>
             <mat-select formControlName="country_id">
@@ -45,7 +28,7 @@
             </mat-error>
           </mat-form-field>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-6">
+        <div class="col-sm-12 col-md-4 col-lg-4">
           <mat-form-field class="example-full-width" appearance="outline">
             <mat-label>City*</mat-label>
             <mat-select formControlName="city_id">
@@ -59,9 +42,8 @@
             </mat-error>
           </mat-form-field>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-6">
+     
+        <div class="col-sm-12 col-md-4 col-lg-4">
           <mat-form-field class="example-full-width" appearance="outline">
             <mat-label>Contact No*</mat-label>
             <input type="text" matInput formControlName="contact_number">
@@ -71,7 +53,7 @@
             </mat-error>
           </mat-form-field>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-6">
+        <div class="col-sm-12 col-md-4 col-lg-4">
           <mat-form-field class="example-full-width" appearance="outline">
             <mat-label>Currency*</mat-label>
             <mat-select formControlName="currency_id">
@@ -85,9 +67,8 @@
             </mat-error>
           </mat-form-field>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-6">
+    
+        <div class="col-sm-12 col-md-4 col-lg-4">
           <mat-form-field class="example-full-width" appearance="outline">
             <mat-label>User Name*</mat-label>
             <input type="text" matInput formControlName="user_name">
@@ -97,7 +78,7 @@
             </mat-error>
           </mat-form-field>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-6">
+        <div class="col-sm-12 col-md-4 col-lg-4">
           <mat-form-field class="example-full-width" appearance="outline">
             <mat-label>User Email*</mat-label>
             <input type="text" matInput formControlName="user_email">
@@ -107,9 +88,8 @@
             </mat-error>
           </mat-form-field>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-6">
+     
+        <div class="col-sm-12 col-md-4 col-lg-4">
           <mat-form-field class="example-full-width" appearance="outline">
             <mat-label>User Password*</mat-label>
             <input type="password" matInput formControlName="user_password">
@@ -119,7 +99,7 @@
             </mat-error>
           </mat-form-field>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-6">
+        <div class="col-sm-12 col-md-4 col-lg-4">
           <mat-form-field class="example-full-width" appearance="outline">
             <mat-label>User Contact No*</mat-label>
             <input type="text" matInput formControlName="user_contact_no">
