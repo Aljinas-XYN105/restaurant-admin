@@ -35,7 +35,7 @@ export class RegistrationsComponent {
   currencyArray: any = []
   public emailPattern = "[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$";
   branchId: any = this.route.snapshot.params['branch_id'];
-  tenantId:any=this.route.snapshot.params['tenanat_id'];
+  tenantId:any=this.route.snapshot.params['tenant_id'];
   displayedColumns: string[] = ['Registered_date', 'Expiry_date', 'notice_period', 'grace_period', 'amount','actions'];
   public dataSource = new MatTableDataSource<Data>();
 

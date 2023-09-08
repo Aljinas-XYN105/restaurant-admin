@@ -11,7 +11,7 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class OperationsComponent {
   branchId: any = this.route.snapshot.params['branch_id'];
-  tenantId: any = this.route.snapshot.params['tenanat_id'];
+  tenantId: any = this.route.snapshot.params['tenant_id'];
   branchName: any;
   constructor(private route: ActivatedRoute, public dataService: DataService, private router: Router, public dialog: MatDialog) {
     this.branchName = this.dataService.getData('branch_name')
@@ -29,7 +29,7 @@ export class OperationsComponent {
 
   moduleManagement() {
     this.dataService.setData('branch_name', this.branchName);
-    this.router.navigate(['branches/' + this.branchId + '/operations/module-management'])
+    this.router.navigate(['branches/' + this.branchId + '/' + this.tenantId +  '/operations/module-management'])
   }
   registrations() {
     this.dataService.setData('branch_name', this.branchName);
