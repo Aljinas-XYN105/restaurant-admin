@@ -32,6 +32,7 @@ import { CopyMenuModifiersComponent } from './copy-menu-modifiers/copy-menu-modi
 import { MenuCopyComponent } from './menu-copy/menu-copy.component';
 import { SubscriptionHistoryComponent } from './subscription-history/subscription-history.component';
 import { PrinterLogoUploadComponent } from './printer-logo-upload/printer-logo-upload.component';
+import { CustomerUploadComponent } from './customer-upload/customer-upload.component';
 @NgModule({
   declarations: [
     BranchesComponent,
@@ -45,6 +46,7 @@ import { PrinterLogoUploadComponent } from './printer-logo-upload/printer-logo-u
     CopyMenuModifiersComponent,
     SubscriptionHistoryComponent,
     PrinterLogoUploadComponent,
+    CustomerUploadComponent
   ],
   imports: [
     CommonModule,

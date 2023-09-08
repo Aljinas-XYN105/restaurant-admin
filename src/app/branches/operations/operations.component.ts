@@ -57,4 +57,8 @@ export class OperationsComponent {
     this.dataService.setData('branch_name', this.branchName);
     this.router.navigate(['staff/' + this.branchId + '/' + this.tenantId])
   }
+  customerUpload() {
+    this.dataService.setData('branch_name', this.branchName);
+    this.router.navigate(['branches/' + this.branchId + '/' + this.tenantId + '/operations/customer-upload'])
+  }
 }

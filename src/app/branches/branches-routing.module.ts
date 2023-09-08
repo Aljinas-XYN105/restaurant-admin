@@ -8,6 +8,7 @@ import { AssignStaffComponent } from './assign-staff/assign-staff.component';
 import { CopyMenuModifiersComponent } from './copy-menu-modifiers/copy-menu-modifiers.component';
 import { MenuCopyComponent } from './menu-copy/menu-copy.component';
 import { PrinterLogoUploadComponent } from './printer-logo-upload/printer-logo-upload.component';
+import { CustomerUploadComponent } from './customer-upload/customer-upload.component';
 
 const routes: Routes = [{ path: '', component: BranchesComponent },
 { path: ':branch_id/:tenant_id/operations', component: OperationsComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [{ path: '', component: BranchesComponent },
 { path: ':branch_id/:tenant_id/operations/menu-copy', component: MenuCopyComponent },
 { path: ':branch_id/:tenant_id/operations/copy-menu-modifiers', component: CopyMenuModifiersComponent },
 { path: ':branch_id/:tenant_id/operations/printer-logo', component: PrinterLogoUploadComponent },
+{ path: ':branch_id/:tenant_id/operations/customer-upload', component: CustomerUploadComponent },
 ];
 
 @NgModule({
