@@ -31,6 +31,7 @@ import { AssignStaffComponent } from './assign-staff/assign-staff.component';
 import { CopyMenuModifiersComponent } from './copy-menu-modifiers/copy-menu-modifiers.component';
 import { MenuCopyComponent } from './menu-copy/menu-copy.component';
 import { SubscriptionHistoryComponent } from './subscription-history/subscription-history.component';
+import { PrinterLogoUploadComponent } from './printer-logo-upload/printer-logo-upload.component';
 @NgModule({
   declarations: [
     BranchesComponent,
@@ -43,6 +44,7 @@ import { SubscriptionHistoryComponent } from './subscription-history/subscriptio
     MenuCopyComponent,
     CopyMenuModifiersComponent,
     SubscriptionHistoryComponent,
+    PrinterLogoUploadComponent,
   ],
   imports: [
     CommonModule,

@@ -28,7 +28,7 @@ export class SubscriptionHistoryComponent {
     public dialogRef: MatDialogRef<SubscriptionHistoryComponent>) {
   }
   ngOnInit() {
-    this.httpService.get('admin/branch-payment-history/' + this.data?.branch_id)
+    this.httpService.get('admin/branch-payment-history/' + this.data?.branch_id,false)
     .subscribe(result => {
       if (result.status == 200) {
        

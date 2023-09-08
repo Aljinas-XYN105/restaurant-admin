@@ -15,6 +15,7 @@ export class ModuleManagementComponent {
   activeModules: any = [];
   branchId: any = this.route.snapshot.params['branch_id'];
   branchName: any;
+  tenantId: any = this.route.snapshot.params['tenant_id'];
   constructor(private snackBService: SnackBarService, private httpService: HttpServiceService, private dataService: DataService, private router: Router, private route: ActivatedRoute) {
     this.branchName = this.dataService.getData('branch_name')
   }

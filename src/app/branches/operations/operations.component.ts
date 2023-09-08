@@ -35,13 +35,14 @@ export class OperationsComponent {
     this.dataService.setData('branch_name', this.branchName);
     this.router.navigate(['branches/' + this.branchId + '/' + this.tenantId + '/operations/registrations'])
   }
-  printerLogo() {
-
-  }
-
+ 
   assignStaff() {
     this.dataService.setData('branch_name', this.branchName);
     this.router.navigate(['branches/' + this.branchId + '/' + this.tenantId + '/operations/assign-staff'])
+  }
+  printerLogo() {
+    this.dataService.setData('branch_name', this.branchName);
+    this.router.navigate(['branches/' + this.branchId + '/' + this.tenantId + '/operations/printer-logo'])
   }
   menuCopy() {
     this.dataService.setData('branch_name', this.branchName);
@@ -51,5 +52,9 @@ export class OperationsComponent {
   copyModifiers() {
     this.dataService.setData('branch_name', this.branchName);
     this.router.navigate(['branches/' + this.branchId + '/' + this.tenantId + '/operations/copy-menu-modifiers'])
+  }
+  staffManagment() {
+    this.dataService.setData('branch_name', this.branchName);
+    this.router.navigate(['staff/' + this.branchId + '/' + this.tenantId])
   }
 }

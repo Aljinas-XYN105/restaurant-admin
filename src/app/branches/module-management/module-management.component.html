@@ -1,3 +1,12 @@
+<div class="breadcrumbs">
+  <ul>
+    <li><a routerLink="/tenant"><span><i class="fal fa-home mr-2"></i>Tenant</span></a></li>
+    <li><a routerLink="/branches"><span>Branches</span></a></li>
+    <li><a routerLink="/branches/{{branchId}}/{{tenantId}}/operations"><span>Operations</span></a></li>
+    <li><a class="active"><span>
+          Module Management</span></a></li>
+  </ul>
+</div>
 <div class="card">
   <div class="card-head"><i class="fal fa-circle mr-3" aria-hidden="true"></i>Module Management
     <strong>{{branchName}}</strong>

@@ -1,0 +1,73 @@
+<div class="breadcrumbs">
+    <ul>
+      <li><a routerLink="/tenant"><span><i class="fal fa-home mr-2"></i>Tenant</span></a></li>
+      <li><a routerLink="/branches"><span>Branches</span></a></li>
+      <li><a routerLink="/branches/{{branchId}}/{{tenantId}}/operations"><span>Operations</span></a></li>
+      <li><a class="active"><span>
+            Printer Logo</span></a></li>
+    </ul>
+  </div>
+  <div class="card">
+    <div class="card-head"><i class="fal fa-circle mr-3" aria-hidden="true"></i>Printer Logo Upload</div>
+    <div class="card-body">
+      <form [formGroup]="logoForm">
+        <div class="row">
+          <div class="col-sm-12 col-md-4 col-lg-4">
+            <mat-label>Printer Type </mat-label>
+            <mat-form-field class="example-full-width mt-2" appearance="outline">
+                <mat-label>Printer Type </mat-label>
+              <mat-select formControlName="type">
+                <mat-option [value]="0">
+                  Usb Printer
+                </mat-option>
+                <mat-option [value]="1">
+                 Network Printer
+                </mat-option>
+              </mat-select>
+              <mat-error *ngIf="logoForm.controls['type'].hasError('required' ) && logoForm.controls['type'].touched">
+                Required
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col-sm-12 col-md-4 col-lg-4">
+             <mat-label>Printer Logo</mat-label>
+              <input type="file" hidden #fileinput (change)="fileChangeEvent($event)" accept="image/*">
+              <mat-form-field class="example-full-width mt-2" appearance="outline">
+                <mat-label>Browse File *</mat-label>
+                <input type="text" readonly="true" (click)="fileinput.click()" matInput formControlName="file">
+                <mat-error
+                *ngIf="logoForm.controls['file'].hasError('required' ) && logoForm.controls['file'].touched">
+                Required
+              </mat-error>
+                <mat-hint>(Recommended image size is = 600x300 Pixels)</mat-hint>
+              </mat-form-field>
+           </div>
+
+        </div>
+      </form>
+    </div>
+    <div class="card-head"><i class="fal fa-circle mr-3" aria-hidden="true"></i>Uploaded Printer Logo</div>
+    <div class="card-body">
+      
+       
+        <div class="row" *ngIf="logoData.length>0">
+           <div class="col-sm-12 col-md-6 col-lg-6"  *ngFor="let i of logoData">
+              <img src="{{imagePath}}{{i.logo}}" style="width:50%"><br>
+              <span *ngIf="i.type==0" class="ml-5 mt-3">Usb Printer</span>
+              <span *ngIf="i.type==1" class="ml-5 mt-3">Network Printer</span>
+           </div>
+        </div>
+    </div>
+    <div class="card-footer">
+      <div class="right">
+        <button mat-stroked-button class="mr-2" color="warn" (click)="reset()">
+          <mat-icon matSuffix>restart_alt</mat-icon>Reset
+        </button>
+        <button mat-stroked-button color="primary" (click)="save()">
+          <mat-icon matSuffix>app_registration</mat-icon>Save
+        </button>
+      </div>
+    </div>
+
+  </div>
+ 

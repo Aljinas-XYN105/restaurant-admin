@@ -1,3 +1,10 @@
+<div class="breadcrumbs">
+  <ul>
+    <li><a routerLink="/tenant"><span><i class="fal fa-home mr-2"></i>Tenant</span></a></li>
+    <li><a class="active"><span>
+          Branches</span></a></li>
+  </ul>
+</div>
 <div class="card">
   <div class="card-head"><i class="fal fa-circle mr-3" aria-hidden="true"></i>All Branches For
     <strong>{{tenantName}}</strong> </div>
@@ -39,8 +46,8 @@
             <button mat-stroked-button class="mr-2" color="warn" (click)="deletePost(row)" matTooltip="Delete">
               <mat-icon>delete</mat-icon>
             </button>
-            <button mat-stroked-button matTooltip="Staff" class="mr-2" color="primary" (click)="staff(row)">Staff
-            </button>
+            <!-- <button mat-stroked-button matTooltip="Staff" class="mr-2" color="primary" (click)="staff(row)">Staff
+            </button> -->
             <button mat-stroked-button matTooltip="Operations" color="primary" (click)="operations(row)">
               <i
                 class="fa fa-cogs" aria-hidden="true"></i>

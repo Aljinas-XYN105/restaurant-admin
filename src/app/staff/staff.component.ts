@@ -3,19 +3,21 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ConfirmationDialogService } from 'src/app/_services/confirmation-dialog.service';
 import { DataService } from 'src/app/_services/data.service';
 import { HttpServiceService } from 'src/app/_services/http-service.service';
 import { SnackBarService } from 'src/app/_services/snack-bar.service';
 import { AddStaffComponent } from './add-staff/add-staff.component';
 
-export interface staffData {
-  id: string;
-  name: string;
-  progress: string;
-  fruit: string;
-}
+  export interface staffData {
+    id: string;
+    name: string;
+    email: string;
+    contact_no: string;
+    role:any;
+    status:any;
+  }
 
 @Component({
   selector: 'app-staff',
@@ -25,35 +27,29 @@ export interface staffData {
 export class StaffComponent {
   displayedColumns: string[] = ['name', 'email', 'contact_no', 'role', 'status', 'actions'];
   public dataSource = new MatTableDataSource<staffData>();
-  branch_id: any;
-  tenant_id: any;
+  tenantId: any = this.route.snapshot.params['tenant_id'];
+  branchId: any = this.route.snapshot.params['branch_id'];
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
   branchName: any = this.dataService.getData('branch_name')
-  constructor(private dialogService: ConfirmationDialogService, private router: Router, private dataService: DataService, private snackBService: SnackBarService, private httpService: HttpServiceService, public dialog: MatDialog) {
-    this.branch_id = this.dataService.getData('branch_id');
+  constructor(private route: ActivatedRoute, private dialogService: ConfirmationDialogService, private router: Router, private dataService: DataService, private snackBService: SnackBarService, private httpService: HttpServiceService, public dialog: MatDialog) {
   }
 
   ngOnInit(): void {
-    if (this.dataService.getData('branch_id')) {
+    if (this.dataService.getData('branch_name')) {
       this.getData()
     }
     else {
-      this.router.navigate(['branches'])
+      this.router.navigate(['tenant'])
     }
   }
 
-  ngOnDestroy() {
-    this.dataService.setData('branch_id', null);
-    this.dataService.setData('branch_name', null);
-  }
 
   getData() {
-    this.httpService.get('admin/list-staff/' + this.branch_id)
+    this.httpService.get('admin/list-staff/' + this.branchId)
       .subscribe(result => {
         if (result.status == 200) {
           const data: any = [];
-          this.tenant_id = result.data[0].tenant_id;
           result.data?.forEach((obj: any) => {
             let objData = {
               id: obj.id,
@@ -77,8 +73,8 @@ export class StaffComponent {
     const dialogRef = this.dialog.open(AddStaffComponent, {
       width: '800px',
       data: {
-        'branch_id': this.branch_id,
-        'tenant_id': this.tenant_id
+        'branch_id': this.branchId,
+        'tenant_id': this.tenantId
       },
       position: { top: '0px' }
     });
@@ -132,8 +128,8 @@ export class StaffComponent {
       data: {
         operation: 'edit',
         editData: element,
-        branch_id: this.branch_id,
-        tenant_id: this.tenant_id
+        branch_id: this.branchId,
+        tenant_id: this.tenantId
       },
       position: { top: '0px' }
     });
