@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormArray, FormGroup, UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { HttpServiceService } from 'src/app/_services/http-service.service';
 import { SnackBarService } from 'src/app/_services/snack-bar.service';
-import * as moment from 'moment';
 import { Constants } from 'src/constants';
 import { Router } from '@angular/router';
 import { indexOf } from 'lodash';

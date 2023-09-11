@@ -1,7 +1,6 @@
 import { Component, Inject, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import * as moment from 'moment';
 import { DataService } from 'src/app/_services/data.service';
 import { HttpServiceService } from 'src/app/_services/http-service.service';
 import { LocalStorage } from 'src/app/_services/localstore.service';
