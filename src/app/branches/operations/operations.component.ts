@@ -61,4 +61,8 @@ export class OperationsComponent {
     this.dataService.setData('branch_name', this.branchName);
     this.router.navigate(['branches/' + this.branchId + '/' + this.tenantId + '/operations/customer-upload'])
   }
+  licenseKey(){
+    this.dataService.setData('branch_name', this.branchName);
+    this.router.navigate(['branches/' + this.branchId + '/' + this.tenantId + '/operations/license-key'])
+  }
 }

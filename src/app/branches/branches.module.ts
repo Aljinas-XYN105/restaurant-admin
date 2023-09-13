@@ -33,6 +33,8 @@ import { MenuCopyComponent } from './menu-copy/menu-copy.component';
 import { SubscriptionHistoryComponent } from './subscription-history/subscription-history.component';
 import { PrinterLogoUploadComponent } from './printer-logo-upload/printer-logo-upload.component';
 import { CustomerUploadComponent } from './customer-upload/customer-upload.component';
+import { BranchLicenseKeyComponent } from './branch-license-key/branch-license-key.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
 @NgModule({
   declarations: [
     BranchesComponent,
@@ -46,7 +48,8 @@ import { CustomerUploadComponent } from './customer-upload/customer-upload.compo
     CopyMenuModifiersComponent,
     SubscriptionHistoryComponent,
     PrinterLogoUploadComponent,
-    CustomerUploadComponent
+    CustomerUploadComponent,
+    BranchLicenseKeyComponent
   ],
   imports: [
     CommonModule,
@@ -71,7 +74,8 @@ import { CustomerUploadComponent } from './customer-upload/customer-upload.compo
     MatDialogModule,
     MatSlideToggleModule,
     MatCheckboxModule,
-    DragDropModule
+    DragDropModule,
+    MatTooltipModule
   ],
   providers: [
     MatDatepickerModule, ConfirmationDialogService
