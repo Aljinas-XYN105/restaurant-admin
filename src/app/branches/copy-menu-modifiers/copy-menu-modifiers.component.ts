@@ -57,7 +57,7 @@ export class CopyMenuModifiersComponent {
   submit() {
     if (this.Form.valid) {
       const options = {
-        title: 'Copy Menu Modifiers',
+        title: 'Copy Menu',
         message: 'Are you sure ?',
         cancelText: 'NO',
         confirmText: 'YES'
@@ -65,10 +65,10 @@ export class CopyMenuModifiersComponent {
       this.dialogService.open(options);
       this.dialogService.confirmed().subscribe(confirmed => {
         if (confirmed) {
-          this.httpService.get('admin/copy-menu-modifier/' + this.tenantId + '/' + this.Form.value['from_branch_id'] + '/' + this.Form.value['to_branch_id'])
+          this.httpService.get('admin/copy-menu/' + this.Form.value['from_branch_id'] + '/' + this.Form.value['to_branch_id'])
             .subscribe(result => {
               if (result.status == 200) {
-                this.snackbService.openSnackBar(result.message, "Close")
+                this.snackbService.openSnackBar(result.data, "Close")
               } else {
                 this.snackbService.openSnackBar(result.message, "Close")
               }
