@@ -15,7 +15,7 @@ export class AddBranchComponent {
   public branchForm!: UntypedFormGroup;
   countriesArray: any = [];
   selectedCountry: any;
-  cityArray: any = [];
+  // cityArray: any = [];
   tenantArray: any = [];
   currencyArray: any = []
   public emailPattern = "[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$";
@@ -26,7 +26,7 @@ export class AddBranchComponent {
   ngOnInit() {
     this.onBuildForm();
     this.getCountries();
-    this.getCity();
+    // this.getCity();
     this.getTenant();
     this.getCurrency()
     if (this.data?.operation == 'edit') {
@@ -44,7 +44,7 @@ export class AddBranchComponent {
       user_name: ['', Validators.compose([Validators.required])],
       user_email: ['', Validators.compose([Validators.required, Validators.pattern(this.emailPattern)])],
       user_password: ['', Validators.compose([Validators.required])],
-      city_id: ['', Validators.compose([Validators.required])],
+      city: ['', Validators.compose([Validators.required])],
       user_contact_no: ['', Validators.compose([Validators.required, Validators.pattern('^([0-9]{6,13})$')])],
     })
   }
@@ -53,10 +53,9 @@ export class AddBranchComponent {
     this.branchForm.patchValue({
       'name': this.data.editData.name,
       'country_id': this.data.editData.country_id,
-      'city_id': this.data.editData.city,
+      'city': this.data.editData.city,
       'currency_id': this.data.editData.currency_id,
       'contact_number': this.data.editData.contact_no,
-      'city': this.data.editData.city_id,
       'tenant_id': this.data.editData.tenant_id
     })
     this.selectedCountry = this.data.editData.country_id;
@@ -77,16 +76,16 @@ export class AddBranchComponent {
       });
   }
 
-  getCity() {
-    this.httpService.get('city', false)
-      .subscribe(result => {
-        if (result.status == 200) {
-          this.cityArray = result.data.cities;
-        } else {
-          this.snackbService.openSnackBar(result.message, "")
-        }
-      });
-  }
+  // getCity() {
+  //   this.httpService.get('city', false)
+  //     .subscribe(result => {
+  //       if (result.status == 200) {
+  //         this.cityArray = result.data.cities;
+  //       } else {
+  //         this.snackbService.openSnackBar(result.message, "")
+  //       }
+  //     });
+  // }
 
   getTenant() {
     this.httpService.get('admin/tenant', false)

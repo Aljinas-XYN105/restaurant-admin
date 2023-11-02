@@ -49,6 +49,15 @@ export class OperationsComponent {
     this.router.navigate(['branches/' + this.branchId + '/' + this.tenantId + '/operations/menu-copy'])
   }
 
+  branchMenuRefresh() {
+    this.dataService.setData('branch_name', this.branchName);
+    this.router.navigate(['branches/' + this.branchId + '/' + this.tenantId + '/operations/branch-menu-refresh'])
+  }
+
+  inventoryMenuRefresh() {
+    this.dataService.setData('branch_name', this.branchName);
+    this.router.navigate(['branches/' + this.branchId + '/' + this.tenantId + '/operations/inventory-menu-refresh'])
+  }
   copyModifiers() {
     this.dataService.setData('branch_name', this.branchName);
     this.router.navigate(['branches/' + this.branchId + '/' + this.tenantId + '/operations/copy-menu-modifiers'])

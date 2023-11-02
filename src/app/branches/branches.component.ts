@@ -55,7 +55,7 @@ export class BranchesComponent {
               id: obj.id,
               name: obj.name,
               country_id: obj.country_id,
-              city: obj.city_id,
+              city: obj.city,
               currency_id: obj.currency_id,
               contact_no: obj.contact_no,
               email: obj.email_id,

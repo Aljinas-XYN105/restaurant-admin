@@ -35,6 +35,8 @@ import { PrinterLogoUploadComponent } from './printer-logo-upload/printer-logo-u
 import { CustomerUploadComponent } from './customer-upload/customer-upload.component';
 import { BranchLicenseKeyComponent } from './branch-license-key/branch-license-key.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { BranchMenuRefreshComponent } from './branch-menu-refresh/branch-menu-refresh.component';
+import { InventoryMenuRefreshComponent } from './inventory-menu-refresh/inventory-menu-refresh.component';
 @NgModule({
   declarations: [
     BranchesComponent,
@@ -49,7 +51,9 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     SubscriptionHistoryComponent,
     PrinterLogoUploadComponent,
     CustomerUploadComponent,
-    BranchLicenseKeyComponent
+    BranchLicenseKeyComponent,
+    BranchMenuRefreshComponent,
+    InventoryMenuRefreshComponent
   ],
   imports: [
     CommonModule,
