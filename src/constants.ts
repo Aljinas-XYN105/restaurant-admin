@@ -12,16 +12,16 @@ export class Constants {
   constructor() {
 
     // Test Link
-    this.APIBasePath = "https://restaurant-api.xynosoft.com/api/";
-    this.imageBasePath = "https://restaurant-api.xynosoft.com/storage";
+    // this.APIBasePath = "https://restaurant-api.xynosoft.com/api/";
+    // this.imageBasePath = "https://restaurant-api.xynosoft.com/storage";
 
     // Live Unidiner Link
     // this.APIBasePath = "https://api.unidiner.com/api/";
     // this.imageBasePath = "https://api.unidiner.com/storage";
 
     // Live sllerbix Link
-    //  this.APIBasePath = "https://apir.sellerbix.com/api/";
-    //  this.imageBasePath = "https://apir.sellerbix.com/storage";
+     this.APIBasePath = "https://apir.sellerbix.com/api/";
+     this.imageBasePath = "https://apir.sellerbix.com/storage";
 
     this.is_main = true;
     this.APIRequestTimeout = 25000;
